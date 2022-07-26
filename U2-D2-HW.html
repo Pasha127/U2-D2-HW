@@ -404,22 +404,22 @@
     <a href="#" class="float-right mb-3 mr-3">Back to top</a>
     <script>
         /* JS Exercises should go here */
-        // Write a JavaScript functionality to add a new link into the navbar
+        //13 Write a JavaScript functionality to add a new link into the navbar
         const nav = document.querySelector("nav.nav");
         const newNavLine= document.createElement("span");
         newNavLine.innerText="Inserted"
         newNavLine.style.color = "#ff00ff";
         nav.append(newNavLine);
-        // Write a JavaScript functionality to change the color of the main heading title
+        //14 Write a JavaScript functionality to change the color of the main heading title
         const mainHeader = document.querySelector("h1");
         mainHeader.style.color = "#00ff00";
-        // Write a JavaScript functionality to change the background of the jumbotron
+        //15 Write a JavaScript functionality to change the background of the jumbotron
         const jumboTron = document.querySelector(".jumbotron");
         jumboTron.style.backgroundColor = "#ff0000";
-        // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
+        //16 Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
         const twitterLine = document.querySelector("aside div:nth-of-type(3) ol li:nth-of-type(2)");
         twitterLine.style.display = "none";
-        // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+        //17 Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
         const arrayOfBlogs = document.querySelectorAll(".blog-post p:nth-of-type(2)");
         for(let i=0; i<arrayOfBlogs.length; i++){
             for(let j=0; j<50; j++){
@@ -428,7 +428,7 @@
             }
             
         }
-         //Write a JavaScript functionality to add a new Blog Post (div with title and text)
+         //18 Write a JavaScript functionality to add a new Blog Post (div with title and text)
         const newDivContainer = document.createElement("div");
         const newDivTitle = document.createElement("h2")
         const newDivContent = document.createElement('p');        
@@ -440,12 +440,12 @@
         newDivContainer.append(newDivTitle);
         newDivContainer.append(newDivContent);
         lastBlog.after(newDivContainer);
-         //Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+         //19 Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
         const olderButton = document.querySelector(".blog-pagination .btn.btn-outline-primary");
         olderButton.onclick = function (){
             newDivContainer.style.display = "none";
         }
-        // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+        //20 Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
         const listOfAuthors = document.querySelectorAll(".blog-post .blog-post-meta a");
         const alertTheName = function(e){
             alert(e.target.innerText);
@@ -453,7 +453,7 @@
         for(let i=0; i<listOfAuthors.length; i++){
             listOfAuthors[i].addEventListener(onmouseover, alertTheName);
         }
-        // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
+        //21 EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
         const continueCards = document.querySelectorAll(".row.no-gutters.border.rounded.overflow-hidden")
         const continues = document.querySelectorAll(".row.no-gutters.border.rounded.overflow-hidden a");
         continues[0].onclick = function (){continueCards[0].style.display = "none";}
