@@ -422,11 +422,7 @@
         //17 Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
         const arrayOfBlogs = document.querySelectorAll(".blog-post p:nth-of-type(2)");
         for(let i=0; i<arrayOfBlogs.length; i++){
-            for(let j=0; j<50; j++){
-                //console.log(arrayOfBlogs[i].innerText[j],j);
-                //arrayOfBlogs[i].innerText = arrayOfBlogs[i].innerText[0].substring(1);
-            }
-            
+            arrayOfBlogs[i].innerText = arrayOfBlogs[i].innerText.substring(50);
         }
          //18 Write a JavaScript functionality to add a new Blog Post (div with title and text)
         const newDivContainer = document.createElement("div");
@@ -451,7 +447,7 @@
             alert(e.target.innerText);
         }
         for(let i=0; i<listOfAuthors.length; i++){
-            listOfAuthors[i].addEventListener(onmouseover, alertTheName);
+            listOfAuthors[i].addEventListener("mouseover", alertTheName);
         }
         //21 EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
         const continueCards = document.querySelectorAll(".row.no-gutters.border.rounded.overflow-hidden")
